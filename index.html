@@ -2,47 +2,85 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>photo editor</h1>
-        </div>
-    </header>
-    <section>
-        <div class="container">
-            <div class="editor">
-                <div class="controls">
-                    <form class="tools">
-                        <label for="sharp">Blur</label>
-                        <input type="range" min="-100" max="100" value="0" id="bl">
-                        <label for="">Contrast</label>
-                        <input type="range" min="0" max="200" value="100" id="cl">
-                        <label for="">Grayscale</label>
-                        <input type="range" min="-100" max="100" value="0" id="gs">
-                        <label for="">Hue-rotate</label>
-                        <input type="range" min="0" max="100" value="0" id="hu">
-                        <label for="">Sepia</label>
-                        <input type="range" min="0" max="100" value="0" id="sp">
-                        <label for="">Brightness</label>
-                        <input type="range" min="0" max="100" value="0" id="bt">
-                    </form>
-                    <!-- <form class="atach"> -->
-                        <input class="file" type="file">
-                        <input class="save" type="button" value="Save">
-                    <!-- </form> -->
-                </div>
-                <div class="photo">
-                    <img id="image" src="" alt="">
-                </div>
+    
+    <nav>
+        <div class="container main_nav">
+
+            <div class="logo">
+                <img src="./image/netflix.png" alt="">
             </div>
+
+            <ul class="menu">
+                <li><a href="">Lorem, ipsum.</a></li>
+                <li><a href="">Eaque, saepe.</a></li>
+                <li><a href="">Explicabo, commodi?</a></li>
+                <li><a href="">Obcaecati, omnis.</a></li>
+                <li><a href="">Numquam, ducimus?</a></li>
+                <li><a href="">Laboriosam, necessitatibus?</a></li>
+            </ul>
+
+            <div class="burger">
+                <button>🍔</button>
+                <ul class="burger_menu">
+                    <li><a href="">Lorem, ipsum.</a></li>
+                    <li><a href="">Eaque, saepe.</a></li>
+                    <li><a href="">Explicabo, commodi?</a></li>
+                    <li><a href="">Obcaecati, omnis.</a></li>
+                    <li><a href="">Numquam, ducimus?</a></li>
+                    <li><a href="">Laboriosam, necessitatibus?</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <section class="gatos">
+        <div class="container">
+            <div class="cards">
+
+                <div class="card">
+                    <img src="./image/Cat.jpg" alt="">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo labore nostrum iste porro quisquam eveniet.</p>
+                    <a href="">click</a>
+                </div>
+
+                <div class="card">
+                    <img src="./image/Cat.jpg" alt="">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo labore nostrum iste porro quisquam eveniet.</p>
+                    <a href="">click</a>
+                </div>
+                <div class="card card_big">
+                    <img src="./image/Cat.jpg" alt="">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo labore nostrum iste porro quisquam eveniet.</p>
+                    <a href="">click</a>
+                </div>
+                <div class="card">
+                    <img src="./image/Cat.jpg" alt="">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo labore nostrum iste porro quisquam eveniet.</p>
+                    <a href="">click</a>
+                </div>
+                <div class="card">
+                    <img src="./image/Cat.jpg" alt="">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo labore nostrum iste porro quisquam eveniet.</p>
+                    <a href="">click</a>
+                </div>
+                <div class="card card_big">
+                    <img src="./image/Cat.jpg" alt="">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo labore nostrum iste porro quisquam eveniet.</p>
+                    <a href="">click</a>
+                </div>
+
+
+            </div>
+            
         </div>
     </section>
 
-    <script src="./js/script.js"></script>
 </body>
 </html>

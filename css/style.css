@@ -1,112 +1,149 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
     padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1340px;
+    margin: 0 auto;
+}
+
+ol,
+ul {
+    list-style: none;
 }
 
 a {
     text-decoration: none;
 }
 
-ul,
-ol {
-    list-style-type: none;
-}
-
 img {
-    width: 100%;
+    max-width: 100%;
 }
 
-.container {
-    max-width: 1140px;
-    margin: 0 auto;
+/* ********************************* */
+
+nav {
+    background-color: lightslategray;
+    padding: 20px 0;
+
+    .main_nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menu {
+        display: flex;
+        gap: 25px;
+    }
+
+    a {
+        color: #fff;
+        font-size: 22px;
+
+        &:hover {
+            color: red;
+        }
+    }
+
+    .logo img {
+        width: 80px;
+    }
+
+    .burger {
+        display: none;
+
+        button {
+            font-size: 30px;
+        }
+
+        button:focus {
+            +.burger_menu {
+                translate: 0;
+            }
+        }
+
+        .burger_menu {
+            background-color: lightseagreen;
+            position: fixed;
+            right: 0;
+            padding: 25px;
+            transition: .5s;
+            width: 100%;
+            translate: 100%;
+        }
+    }
 }
 
-body {
-    background-color: azure;
+/* 
+@media print {
+    nav{
+        a{
+            font-size: 10px;
+        }
+    }
+} */
+
+@media screen and (max-width:1250px) {
+    nav a {
+        font-size: 18px;
+    }
 }
 
-header div h1 {
-    margin-top: 25px;
-    text-align: center;
-    text-transform: capitalize;
-    color: darkorange;
-}
-.editor{
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-}
-.tools {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 25px;
-    margin-bottom: 35px;
-}
-::-webkit-slider-thumb:hover{
-    background-color: rgb(177, 2, 2) !important;
-}
-input::-webkit-slider-thumb:active {
-    background: #ff0000 !important;
+@media screen and (max-width:1060px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    nav {
+        .menu {
+            display: none;
+        }
+
+        .burger {
+            display: block;
+        }
+    }
 }
 
-input::-webkit-slider-thumb {
-    background: #c300ff !important;
+/* ************************* */
+
+.gatos {
+    padding: 60px 0;
+    background-color: #dfdfdf;
 }
 
-input[type=range] {
-    -webkit-appearance: none;
-    appearance: none;
+.cards {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fill , minmax(400px , 1fr)); */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
 }
 
-input[type=range]::-webkit-slider-runnable-track {
-    height: 10px;
-    cursor: pointer;
-    background: #696969;
-    border-radius: 5px;
+.card {
+    box-shadow: 0 0 10px gray;
+    grid-column: 1 span;
 }
 
-input[type=range]::-webkit-slider-thumb {
-    height: 20px;
-    width: 20px;
-    border-radius: 50%;
-    background: #FFFFFF;
-    cursor: pointer;
-    -webkit-appearance: none;
-    margin-top: -5px;
+
+@media all and (max-width:1024px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card_big {
+        grid-column: 2 span;
+    }
 }
 
-input[type=range]:focus::-webkit-slider-runnable-track {
-    background: #6aade7;
-}
-.atach{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-.file::-webkit-file-upload-button{
-    height: 35px;
-    border-radius: 25px;
-    border: none;
-    background: #696969;
-    color: #fff;
-    padding: 10px 15px;
-    cursor: pointer;
-}
-::-webkit-file-upload-button:hover{
-    background-color: #444;
-}
-.save{
-    height: 35px;
-    width: 70px;
-    border: none;
-    border-radius: 25px;
-    background: #696969;
-    color: #fff;
-}
+@media (max-width:568px) {
+    .cards {
+        grid-template-columns: repeat(1, 1fr);
+    }
 
-.photo{
-    width: 50%;
-    border: 2px solid black
+    .card_big {
+        grid-column: 1 span;
+    }
 }
